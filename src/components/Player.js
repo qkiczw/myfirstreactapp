@@ -8,12 +8,12 @@ export default (props) => {
 
     return player?
         <React.Fragment>
-            <h2>{player.id}</h2>
-            <p>{player.name}</p>
-            <p>{player.level}</p>
-            <p>{player.info}</p>
+            <h2>{player.id} - {player.name} </h2>
+            <p><strong>Level gracza:</strong> {player.level}</p>
+            <p><strong>Krótkie info o graczu:</strong> <br />
+                {player.info}</p>
             <Link to='/'><button >Wróć i zobacz innych</button></Link>
         </React.Fragment>
         :
-        <p>Brak produktu</p>
+        <p>Brak gracza</p>
 }

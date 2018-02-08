@@ -11,7 +11,7 @@ export default class extends React.Component {
     render() {
         return <BrowserRouter>
             <React.Fragment>
-                <MyHeader name="Łukasz" />
+                <MyHeader name="Łukasza" />
                 <Route path="/" exact component={Main}/>
                 <Route path="/player/:id" component={Player}/>
                 <MyFooter/>
