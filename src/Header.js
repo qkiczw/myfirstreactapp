@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 
 export class MyHeader extends React.Component{
     render() {
-        const name = 'Łukasz'
+        const name = 'Łukasza';
         return (
             <div className="Header">
-                <h1>To będzie moja pierwsza Appka</h1>
-                <h2>Mam na imię {name} i uczę się ReactJS</h2>
+                <h1>Pierwsza aplikacja {name}</h1>
             </div>
         )
     }
