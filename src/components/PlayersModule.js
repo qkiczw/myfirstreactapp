@@ -1,31 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import players from "../data/playersList";
-
+import {
+    Table,
+    TableHeader,
+    TableBody,
+    TableHeaderColumn,
+    TableRow,
+    TableRowColumn,
+} from 'material-ui/Table'
 
 export default () => {
     const playersTable = Object.keys(players);
     return <React.Fragment>
-        <table>
-            <thead>
-            <tr>
-                <td>{this.name}</td>
-            </tr>
-            <tr>
-                <td><strong>ID</strong></td>
-                <td><strong>Imię</strong></td>
-                <td><strong>Level</strong></td>
-            </tr>
-            </thead>
-            <tbody>
+        <Table>
+            <TableHeader>
+            <TableRow>
+                <TableRowColumn><strong>ID</strong></TableRowColumn>
+                <TableRowColumn><strong>Imię</strong></TableRowColumn>
+                <TableRowColumn><strong>Level</strong></TableRowColumn>
+            </TableRow>
+            </TableHeader>
+            <TableBody>
             {playersTable.map( player =>
-                <tr key={player}>
-                    <td>{players[player].id}</td>
-                    <td><Link to={`/player/${player}`}>{players[player].name}</Link></td>
-                    <td>{players[player].level}</td>
-                </tr>
+                <TableRow key={player}>
+                    <TableRowColumn>{players[player].id}</TableRowColumn>
+                    <TableRowColumn><Link to={`/player/${player}`}>{players[player].name}</Link></TableRowColumn>
+                    <TableRowColumn>{players[player].level}</TableRowColumn>
+                </TableRow>
             )}
-            </tbody>
-        </table>
+            </TableBody>
+        </Table>
     </React.Fragment>
 }

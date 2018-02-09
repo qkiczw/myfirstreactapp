@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayersModule from './PlayersModule'
+import PlayersModule from './PlayersModule';
 
 export default () => {
     return <React.Fragment>
