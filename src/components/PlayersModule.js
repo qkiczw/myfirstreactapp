@@ -9,6 +9,8 @@ import {
     TableRow,
     TableRowColumn,
 } from 'material-ui/Table'
+import Avatar from 'material-ui/Avatar'
+import AvatarIcon from '../gfx/avatar.png'
 
 export default () => {
     const playersTable = Object.keys(players);
@@ -25,7 +27,7 @@ export default () => {
             {playersTable.map( player =>
                 <TableRow key={player}>
                     <TableRowColumn>{players[player].id}</TableRowColumn>
-                    <TableRowColumn><Link to={`/player/${player}`}>{players[player].name}</Link></TableRowColumn>
+                    <TableRowColumn><Avatar src={AvatarIcon}/> <Link to={`/player/${player}`}>{players[player].name}</Link></TableRowColumn>
                     <TableRowColumn>{players[player].level}</TableRowColumn>
                 </TableRow>
             )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import items from '../data/playersList';
-import {RaisedButton} from 'material-ui'
+import {RaisedButton} from 'material-ui';
 
 
 
